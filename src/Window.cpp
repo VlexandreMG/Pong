@@ -24,7 +24,7 @@ int main() {
         // --- DRAW (uniquement du rendu, aucune logique ici) ---
         BeginDrawing();
             ClearBackground(RAYWHITE);
-            DrawCircle(ball.x, ball.y, ball.radius, );
+            DrawCircle(ball.x, ball.y, ball.radius, RED);
         EndDrawing();
     }
 
