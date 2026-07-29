@@ -1,12 +1,14 @@
-#ifndef BALL_HPP
-define BALL_HPP
+#pragma once
 
-struct Ball {
+class Ball {
+public:
     int x;
     int y;
     float speedY;
     float speedX;
     int radius;
-};
 
-#endif
+    Ball(int startX, int startY, float startSpeedX , float startSpeedY , int startRadius );
+
+    void update();
+};
