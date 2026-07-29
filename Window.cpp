@@ -17,8 +17,8 @@ int main() {
 
         // --- DRAW (uniquement du rendu, aucune logique ici) ---
         BeginDrawing();
-            ClearBackground(RAYWHITE);
-            DrawText("Hello, Raylib!", 190, 200, 20, LIGHTGRAY);
+            // ClearBackground(RAYWHITE);
+            // DrawText("Hello, Raylib!", 190, 200, 20, LIGHTGRAY);
         EndDrawing();
     }
 
