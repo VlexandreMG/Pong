@@ -7,5 +7,5 @@ public:
 
     Collisions(Ball ball);
 
-    void collision();
+    void collision(Ball ball , int screenWidth);
 };
