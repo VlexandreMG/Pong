@@ -1,5 +1,5 @@
 #pragma once 
-#include "Ball.hpp";
+#include "../entities/Ball.hpp"
 
 class Collisions {
 public:
@@ -7,5 +7,5 @@ public:
 
     Collisions(Ball ball);
 
-    void collision(Ball ball , int screenWidth);
+    void detectCollision(Ball ball , int screenHeight);
 };

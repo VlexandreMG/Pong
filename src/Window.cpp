@@ -1,5 +1,6 @@
 #include "raylib.h"
-#include "Ball.hpp"
+#include "entities/Ball.hpp"
+#include "systems/Collisions.hpp"
 
 int main() {
     // === INITIALISATION ===
@@ -12,14 +13,15 @@ int main() {
     int startY = screenHeight / 2;
 
     Ball ball(startX,startY,5.0f,5.0f,20);
+    Collisions collision(ball);
 
     // Chargement des ressources (textures, sons...) une seule fois ici
 
     // === BOUCLE PRINCIPALE ===
     while (!WindowShouldClose()) {   // détecte ESC ou clic sur la croix par défaut
-        // --- UPDATE (logique du jeu, aucun appel de dessin ici) ---
-        float dt = GetFrameTime();
-        // ... mettre à jour positions, états, collisions ...
+
+        ball.update();
+        collision.detectCollision(ball,screenWidth);
 
         // --- DRAW (uniquement du rendu, aucune logique ici) ---
         BeginDrawing();
