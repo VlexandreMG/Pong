@@ -13,7 +13,7 @@ int main() {
     int startY = screenHeight / 2;
 
     Ball ball(startX,startY,5.0f,5.0f,20);
-    Collisions collision(ball);
+    Collisions collision;
 
     // Chargement des ressources (textures, sons...) une seule fois ici
 
