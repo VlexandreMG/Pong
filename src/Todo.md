@@ -8,5 +8,5 @@
 
 ## Objectif 2 : Système de point 
 
-- Créer une condition où à chaque fois que la balle touche le width du terrain , on incrémente un point. 
-- La balle revient à la au point de départ après avoir atteint le width.
+- Créer une condition où à chaque fois que la balle touche le width du terrain , on incrémente un point. [x]
+- La balle revient à la au point de départ après avoir atteint le width. [x]
