@@ -9,6 +9,6 @@ Ball::Ball(int startX, int startY, float startSpeedX , float startSpeedY , int s
 }
 
 void Ball::update() {
-    x += (int)speedX;
-    y += (int)speedY;
+    x += speedX;
+    y += speedY;
 }

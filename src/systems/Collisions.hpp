@@ -3,5 +3,5 @@
 
 class Collisions {
 public:
-    void detectCollision(Ball ball , int screenHeight, int screenWidth);
+    void detectCollision(Ball& ball , int screenHeight, int screenWidth);
 };
