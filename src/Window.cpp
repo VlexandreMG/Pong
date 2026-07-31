@@ -1,5 +1,6 @@
 #include "raylib.h"
 #include "entities/Ball.hpp"
+#include "entities/Line.hpp"
 #include "systems/Collisions.hpp"
 
 int main() {
@@ -14,6 +15,7 @@ int main() {
 
     Ball ball(startX,startY,5.0f,5.0f,20);
     Collisions collision;
+    Line net = {{400.0f,0.0f},{400.0f, 600.0f}, 4.0f, LIGHTGRAY};
 
     // Chargement des ressources (textures, sons...) une seule fois ici
 
@@ -28,6 +30,7 @@ int main() {
             ClearBackground(RAYWHITE);
             DrawCircle(ball.x, ball.y, ball.radius, RED);
             DrawText(TextFormat("Point accumulé : %d",collision.point), 190, 200, 20, LIGHTGRAY);
+            DrawLineEx(net.startPos, net.endPos, net.thickness, net.color); 
         EndDrawing();
     }
 
