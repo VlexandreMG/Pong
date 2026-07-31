@@ -2,6 +2,6 @@
 
 - Installation environnement Raylib [x]
 - Afficher une fenêtre [x]
-- Afficher un point []
-- Faire la physique du jeu [] 
-    - Faire rebondir la balle sur n'importe quelle bord []
+- Afficher un point [x]
+- Faire la physique du jeu [x] 
+    - Faire rebondir la balle sur n'importe quelle bord [x]
