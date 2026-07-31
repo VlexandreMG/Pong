@@ -3,6 +3,6 @@
 
 class Collisions {
 public:
-    int point;
+    int point = 0;
     void detectCollision(Ball& ball , int screenHeight, int screenWidth);
 };

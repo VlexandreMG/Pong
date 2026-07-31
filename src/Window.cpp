@@ -27,6 +27,7 @@ int main() {
         BeginDrawing();
             ClearBackground(RAYWHITE);
             DrawCircle(ball.x, ball.y, ball.radius, RED);
+            DrawText(TextFormat("Point accumulé : %d",collision.point), 190, 200, 20, LIGHTGRAY);
         EndDrawing();
     }
 

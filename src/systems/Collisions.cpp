@@ -7,7 +7,7 @@ void Collisions::detectCollision(Ball& thisBall, int screenHeight , int screenWi
     } 
     
     if (thisBall.x + thisBall.radius >= screenWidth || thisBall.x - thisBall.radius <= 0) {
-        // thisBall.speedX = -(thisBall.speedX);
+        thisBall.speedX = -(thisBall.speedX);
         Collisions::point += 1;
     }
 }
