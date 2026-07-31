@@ -7,5 +7,5 @@ public:
 
     Collisions(Ball ball);
 
-    void detectCollision(Ball ball , int screenHeight);
+    void detectCollision(Ball ball , int screenHeight, int screenWidth);
 };

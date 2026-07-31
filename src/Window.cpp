@@ -21,7 +21,7 @@ int main() {
     while (!WindowShouldClose()) {   // détecte ESC ou clic sur la croix par défaut
 
         ball.update();
-        collision.detectCollision(ball,screenWidth);
+        collision.detectCollision(ball,screenHeight,screenWidth);
 
         // --- DRAW (uniquement du rendu, aucune logique ici) ---
         BeginDrawing();
