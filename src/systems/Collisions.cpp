@@ -8,10 +8,18 @@ void Collisions::detectCollision(Ball& thisBall, int screenHeight , int screenWi
     } 
     
     if (thisBall.x + thisBall.radius >= screenWidth || thisBall.x - thisBall.radius <= 0) {
-        thisBall.speedX = -(thisBall.speedX);
-        Collisions::point += 1;
-        thisBall.x = screenWidth / 2;
-        thisBall.y = screenHeight / 2;
+        
+        if (isGameOver) return;
+
+        if (Collisions::point >= 3) {
+            isGameOver = true;
+        } else {
+            thisBall.speedX = -(thisBall.speedX);
+            Collisions::point += 1;
+            thisBall.x = screenWidth / 2;
+            thisBall.y = screenHeight / 2;
+        }
+    
     }
 }
 

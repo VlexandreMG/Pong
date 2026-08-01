@@ -5,6 +5,7 @@
 class Collisions {
 public:
     int point = 0;
+    bool isGameOver = false;
     void detectCollision(Ball& ball , int screenHeight, int screenWidth);
     void detectLineCollision(Ball& ball, Line& line);
 };
