@@ -18,4 +18,4 @@
 
 ## Objectif 4 : Déplacement de la barre 
 
-- Pouvoir deplacer la barre de haut en bas []
+- Pouvoir deplacer la barre de haut en bas [x]
