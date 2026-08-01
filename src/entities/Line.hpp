@@ -7,6 +7,4 @@ public:
     Vector2 endPos;
     float thickness;
     Color color;
-
-    void detectLineCollision(Ball& ball, Line& line);
 };

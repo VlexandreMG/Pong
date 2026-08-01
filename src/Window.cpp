@@ -24,7 +24,7 @@ int main() {
 
         ball.update();
         collision.detectCollision(ball,screenHeight,screenWidth);
-
+        collision.detectLineCollision(ball,net);
         // --- DRAW (uniquement du rendu, aucune logique ici) ---
         BeginDrawing();
             ClearBackground(RAYWHITE);
