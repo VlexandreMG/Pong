@@ -15,7 +15,7 @@ int main() {
 
     Ball ball(startX,startY,5.0f,5.0f,20);
     Collisions collision;
-    Line net = {{200.0f,80.0f},{200.0f, 600.0f}, 4.0f, LIGHTGRAY};
+    Line net = {{200.0f,80.0f},{200.0f, 600.0f}, 100.0f, LIGHTGRAY};
 
     // Chargement des ressources (textures, sons...) une seule fois ici
 
