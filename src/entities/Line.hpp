@@ -7,4 +7,9 @@ public:
     Vector2 endPos;
     float thickness;
     Color color;
+
+    void moveY(float speed) {
+        startPos.y += speed;
+        endPos.y += speed;
+    }
 };
