@@ -11,7 +11,7 @@ void Collisions::detectCollision(Ball& thisBall, int screenHeight , int screenWi
         
         if (isGameOver) return;
 
-        if (Collisions::point >= 3) {
+        if (Collisions::point == 3) {
             isGameOver = true;
         } else {
             thisBall.speedX = -(thisBall.speedX);

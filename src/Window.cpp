@@ -40,6 +40,20 @@ int main() {
             DrawCircle(ball.x, ball.y, ball.radius, RED);
             DrawText(TextFormat("Point accumulé : %d",collision.point), 190, 200, 20, LIGHTGRAY);
             DrawLineEx(net.startPos, net.endPos, net.thickness, net.color); 
+
+            // --- SI FIN DE PARTIE : Afficher l'alerte ---
+        if (collision.isGameOver) {
+            // Dessiner un fond semi-transparent pour assombrir le jeu
+            DrawRectangle(0, 0, screenWidth, screenHeight, Fade(BLACK, 0.6f));
+
+            // Message "Fin de la partie"
+            int fontSize = 40;
+            int textWidth = MeasureText("Fin de la partie", fontSize);
+            
+            // Centrer le texte
+            DrawText("Fin de la partie", (screenWidth - textWidth) / 2, screenHeight / 2 - 20, fontSize, RED);
+        }
+
         EndDrawing();
     }
 
