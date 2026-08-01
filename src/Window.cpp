@@ -16,11 +16,21 @@ int main() {
     Ball ball(startX,startY,5.0f,5.0f,20);
     Collisions collision;
     Line net = {{200.0f,80.0f},{200.0f, 600.0f}, 100.0f, LIGHTGRAY};
+    float lineSpeed = 5.0f;
 
     // Chargement des ressources (textures, sons...) une seule fois ici
 
     // === BOUCLE PRINCIPALE ===
     while (!WindowShouldClose()) {   // détecte ESC ou clic sur la croix par défaut
+
+        if (IsKeyDown(KEY_UP)) {
+            net.moveY(-lineSpeed);
+        }
+
+
+        if (IsKeyDown(KEY_DOWN)) {
+            net.moveY(lineSpeed);
+        }
 
         ball.update();
         collision.detectCollision(ball,screenHeight,screenWidth);
