@@ -18,11 +18,16 @@ void Collisions::detectCollision(Ball& thisBall, int screenHeight , int screenWi
 void Collisions::detectLineCollision(Ball& ball, Line& line) {
     float halfThick = line.thickness / 2.0f;
     float lineX = line.startPos.x;
-    
+
+    bool inRange = (ball.y + ball.radius >= line.startPos.y) &&
+    (ball.y - ball.radius <= line.endPos.y); 
+
+    if (inRange) {
         if (ball.x - ball.radius <= lineX + halfThick && 
                  ball.x + ball.radius > lineX) 
         {
             ball.speedX = -ball.speedX; // Inverser la vitesse X
         }
-    
+    }
+        
 }
