@@ -13,5 +13,5 @@
 
 ## Objectif 3 : Barre rectangulaire
 
-- Afficher une barre rectangulaire à la verticale []
+- Afficher une barre rectangulaire à la verticale [x]
 - À chaque fois que le ballon touche le bord du rectangle -> la balle est deflect []

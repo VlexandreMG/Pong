@@ -8,4 +8,5 @@ public:
     float thickness;
     Color color;
 
+    void detectLineCollision(Ball& ball, Line& line);
 };
