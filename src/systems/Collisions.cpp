@@ -25,15 +25,15 @@ void Collisions::detectLineCollision(Ball& ball, Line& line) {
 
     if (inYRange) {
         // Impact venant de la GAUCHE de la ligne
-        if (ball.speedX > 0 && 
-            ball.x + ball.radius >= lineX - halfThick && 
-            ball.x - ball.radius < lineX) 
-        {
-            ball.speedX = -ball.speedX; // Inverser la vitesse X
-            ball.x = lineX - halfThick - ball.radius; // Replacer la balle hors du filet pour éviter qu'elle ne s'y coince
-        }
+        // if (ball.speedX > 0 && 
+        //     ball.x + ball.radius >= lineX - halfThick && 
+        //     ball.x - ball.radius < lineX) 
+        // {
+        //     ball.speedX = -ball.speedX; // Inverser la vitesse X
+        //     ball.x = lineX - halfThick - ball.radius; // Replacer la balle hors du filet pour éviter qu'elle ne s'y coince
+        // }
         // Impact venant de la DROITE de la ligne
-        else if (ball.speedX < 0 && 
+        if (
                  ball.x - ball.radius <= lineX + halfThick && 
                  ball.x + ball.radius > lineX) 
         {
