@@ -15,3 +15,7 @@
 
 - Afficher une barre rectangulaire à la verticale [x]
 - À chaque fois que le ballon touche le bord du rectangle -> la balle est deflect [x]
+
+## Objectif 4 : Déplacement de la barre 
+
+- Pouvoir deplacer la barre de haut en bas []
