@@ -51,7 +51,7 @@ int main() {
             int textWidth = MeasureText("Fin de la partie", fontSize);
             
             // Centrer le texte
-            DrawText("Fin de la partie", (screenWidth - textWidth) / 2, screenHeight / 2 - 20, fontSize, RED);
+            DrawText("Fin de la partie", (screenWidth - textWidth) / 2, screenHeight / 2 , fontSize, RED);
         }
 
         EndDrawing();
