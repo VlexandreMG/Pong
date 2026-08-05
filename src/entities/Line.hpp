@@ -22,7 +22,7 @@ public:
         }
 
         if (endPos.y > screenHeight) {
-            endPos.y = 0.0f;
+            endPos.y = screenHeight;
             startPos.y = endPos.y - lineLength;
         }
     }
