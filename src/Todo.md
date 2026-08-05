@@ -22,5 +22,5 @@
 
 ## Objectif 5 : Barre qui bouge en permanence et petits détails 
 
-- La limite de déplacement des barres est la fenêtre []
+- La limite de déplacement des barres est la fenêtre [x]
 - Une autre objet barre MAIS qui bouge pour bloquer les coups []
