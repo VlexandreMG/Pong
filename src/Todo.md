@@ -19,3 +19,8 @@
 ## Objectif 4 : Déplacement de la barre 
 
 - Pouvoir deplacer la barre de haut en bas [x]
+
+## Objectif 5 : Barre qui bouge en permanence et petits détails 
+
+- La limite de déplacement des barres est la fenêtre []
+- Une autre objet barre MAIS qui bouge pour bloquer les coups []
