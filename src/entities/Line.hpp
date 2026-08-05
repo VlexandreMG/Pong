@@ -9,7 +9,7 @@ public:
     Color color;
     float speed;
 
-    void moveY(float amount) {
+    void moveY(float amount, int screenHeight) {
         
         float lineLength = endPos.y - startPos.y;
         
@@ -19,6 +19,11 @@ public:
         if (startPos.y < 0.0f) {
             startPos.y = 0.0f;
             endPos.y = startPos.y + lineLength;
+        }
+
+        if (endPos.y > screenHeight) {
+            endPos.y = 0.0f;
+            startPos.y = endPos.y - lineLength;
         }
     }
 };

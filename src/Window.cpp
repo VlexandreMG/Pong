@@ -23,12 +23,12 @@ int main() {
     while (!WindowShouldClose()) {   // détecte ESC ou clic sur la croix par défaut
 
         if (IsKeyDown(KEY_UP)) {
-            net.moveY(-(net.speed));
+            net.moveY(-(net.speed) , screenHeight);
         }
 
 
         if (IsKeyDown(KEY_DOWN)) {
-            net.moveY(net.speed);
+            net.moveY(net.speed , screenHeight);
         }
 
         ball.update();
