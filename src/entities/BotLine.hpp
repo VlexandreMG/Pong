@@ -4,16 +4,11 @@
 class BotLine : public Line {
 public: 
     int direction = 1;
-    
-    BotLine(Vector2 start , Vecto2 finish , float thick , Color couleur , float vitesse) {
-        startPos = start;
-        endPos = finish;
-        thickness = thick;
-        color = couleur;
-        speed = vitesse;
-    }
 
-    void update (int screenHeight) {
+    BotLine(Vector2 start, Vector2 end, float thick, Color c, float spd)
+        : Line{start, end, thick, c, spd} {} // Transmet les valeurs à Line
+
+    void update(int screenHeight) {
         float lineLength = endPos.y - startPos.y;
         
         startPos.y += speed * direction;
@@ -31,4 +26,4 @@ public:
             direction = -1;
         }
     }
-}
+};

@@ -1,6 +1,7 @@
 #include "raylib.h"
 #include "entities/Ball.hpp"
 #include "entities/Line.hpp"
+#include "entities/BotLine.hpp"
 #include "systems/Collisions.hpp"
 
 int main() {
@@ -16,6 +17,7 @@ int main() {
     Ball ball(startX,startY,5.0f,5.0f,20);
     Collisions collision;
     Line net = {{200.0f,80.0f},{200.0f, 600.0f}, 100.0f, LIGHTGRAY, 5.0f};
+    BotLine botLine = {{600.0f,80.0f},{600.0f,600.0f}, 100.0f , LIGHTGRAY , 5.0f};
 
     // Chargement des ressources (textures, sons...) une seule fois ici
 
@@ -31,6 +33,8 @@ int main() {
             net.moveY(net.speed , screenHeight);
         }
 
+        botLine.update(screenHeight);
+
         ball.update();
         collision.detectCollision(ball,screenHeight,screenWidth);
         collision.detectLineCollision(ball,net);
@@ -40,6 +44,7 @@ int main() {
             DrawCircle(ball.x, ball.y, ball.radius, RED);
             DrawText(TextFormat("Point accumulé : %d",collision.point), 190, 200, 20, LIGHTGRAY);
             DrawLineEx(net.startPos, net.endPos, net.thickness, net.color); 
+            DrawLineEx(botLine.startPos, botLine.endPos, botLine.thickness, botLine.color); 
 
             // --- SI FIN DE PARTIE : Afficher l'alerte ---
         if (collision.isGameOver) {
