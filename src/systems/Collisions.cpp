@@ -37,8 +37,8 @@ void Collisions::detectLineCollision(Ball& ball, Line& line) {
             ball.speedX = -ball.speedX; // Inverser la vitesse X
         }
 
-        if (ball.x + ball.radius <= lineX - halfThick &&
-                ball.x + ball.radius > lineX) 
+        if (ball.x + ball.radius >= lineX - halfThick &&
+                ball.x - ball.radius < lineX) 
         {
             ball.speedX = -ball.speedX;
         }
